@@ -9,6 +9,7 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
+    // Implementação do parâmetro Cascade do tipo MERGE para refletir os Updates tanto no PAI quanto no FILHO
     @ManyToOne(cascade = CascadeType.MERGE)
     private Endereco endereco;
 
